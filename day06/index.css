@@ -5,8 +5,11 @@
 body{
     background-color: bisque;
     display: flex;
+     /* 水平布局 */
     justify-content: center;
+    /* 垂直布局 */
     align-items: center;
+    /* flex的项目将垂直显示，一列一个*/
     flex-direction: column;
     margin: 0;
     /* 隐藏x轴的溢出元素 */
@@ -31,12 +34,12 @@ h1{
     box-shadow: 2px 4px 5px rgba(0,0,0,0.3);
     /* 因为需要从X轴两侧渐入，就用translateX ，
      200%就可以将div移除屏幕,100px是向右移动100px*/
-    transform: translateX(200%);
-    transition: transform 0.4s ease;
+    transform: translateX(-400%);
+    transition: transform 0.8s ease;
 }
 /* 让我们给每个偶数的div一个在左边移动的动画效果 */
 .box:nth-of-type(even){
-    transform: translateX(-200%);
+    transform: translateX(-400%);
 }
 .box.show{
     /* 当我们利用js给div添加类.box.show时，div就会移动回来 */
